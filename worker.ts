@@ -17,7 +17,8 @@ export default {
     const githubRes = await fetch(apiUrl, {
       headers: {
         "Authorization": `token ${env.GITHUB_TOKEN}`,
-        "Accept": "application/vnd.github.v3.raw"
+        "Accept": "application/vnd.github.v3.raw",
+        "User-Agent": "MyCloudflareWorker/1.0"  // ← Required by GitHub
       }
     })
 
